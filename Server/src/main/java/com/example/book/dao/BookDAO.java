@@ -12,6 +12,6 @@ public interface BookDAO {
 	
 	//책 정보 리스트 
 	
-	List<Book> getAllBooks(int bookNo);
+	List<Book> getAllBooks();
 		
 }

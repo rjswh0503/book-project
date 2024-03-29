@@ -24,7 +24,7 @@ public class BookController {
 	
 	@GetMapping("/list")
 	public ResponseEntity<List<Book>> getAllBooks(@PathVariable int bookNo){
-		List<Book> book = bookService.getAllBooks(bookNo);
+		List<Book> book = bookService.getAllBooks();
 		
 		if(book != null) {
 			return ResponseEntity.ok(book);
