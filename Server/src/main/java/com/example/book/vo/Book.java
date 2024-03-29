@@ -13,7 +13,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Book {
 
-	private Long bookNo;
+	private int bookNo;
 	private String bookIsbn;
 	private String bookTitle;
 	private String bookContents;

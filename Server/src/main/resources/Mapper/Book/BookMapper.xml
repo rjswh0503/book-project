@@ -1,1 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.book.dao.BookDAO">
+		<resultMap id="BookMain" type="com.example.book.vo.Book">
+			<id property="bookNo" column="BOOK_NO"/>
+			<result property="bookIsbn" column="BOOK_ISBN"/>
+			<result property="bookTitle" column="BOOK_TITLE"/>
+			<result property="bookContents" column="BOOK_CONTENTS"/>
+			<result property="bookInfoDate" column="BOOK_INFODATE"/>
+			<result property="bookAuthor" column="BOOK_AUTHOR"/>
+			<result property="bookPublisher" column="BOOK_PUBLISHER"/>
+			<result property="bookPrice" column="BOOK_PRICE"/>
+			<result property="bookCategory" column="BOOK_CATEGORY"/>
+			<result property="bookDate" column="BOOK_DATE"/>
+			<result property="bookImg" column="BOOK_IMG"/>
+			<result property="bookAuthorc" column="BOOK_AUTHORC"/>
+			<result property="bookImg2" column="BOOK_IMG2"/>
+		</resultMap>
+		
+		<select id="getAllBooks" resultMap="BookMain" parameterType="int">
+			SELECT * FROM BOOK_INFO
+		</select>
+
+</mapper>
